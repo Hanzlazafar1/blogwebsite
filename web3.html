@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Introduction to Web 3.0</title>
+  <style>
+    /* General Styles */
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+    }
+
+    .container {
+      width: 80%;
+      margin: auto;
+      overflow: hidden;
+    }
+
+    /* Header Styles */
+    header {
+            position: relative;
+            background: linear-gradient(to right, #4a90e2, #50e3c2);
+            color: white;
+            padding: 2rem 0; /* Reduced height */
+            text-align: center;
+        }
+
+        header::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 1;
+        }
+
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 0.5rem;
+            z-index: 2;
+            position: relative;
+        }
+
+        p {
+            font-size: 1.5rem;
+            z-index: 2;
+            position: relative;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: auto;
+            padding: 1rem;
+        }
+
+    /* Blog Content Styles */
+    #blog-content {
+      padding: 20px;
+      background: #ffffff;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      margin-bottom: 20px;
+    }
+
+    .main-img {
+      max-width: 100%;
+      height: auto;
+      margin: 20px 0;
+    }
+
+    article {
+      margin: 20px 0;
+    }
+
+    h2 {
+      color: #35424a;
+    }
+
+    h3 {
+      color: #333;
+      margin-top: 20px;
+    }
+
+    /* Footer Styles */
+    footer {
+      background: #35424a;
+      color: #ffffff;
+      text-align: center;
+      padding: 10px 0;
+      position: relative;
+      bottom: 0;
+      width: 100%;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Header -->
+  <header>
+    <div class="container">
+      <h1>Introduction to Web 3.0</h1>
+      <p>Learn about the decentralized web and its potential impact.</p>
+    </div>
+  </header>
+
+  <!-- Blog Content -->
+  <section id="blog-content">
+    <div class="container">
+      <img class="main-img"
+        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRFChDGHDR0IbTz2KfO4dhd_3qNiaM63EDHrw&s"
+        alt="Web 3.0">
+      <article>
+        <h2>What Is Web 3.0?</h2>
+        <p>Web 3.0 represents the next generation of the internet, focusing on decentralization, blockchain technology,
+          and user empowerment. Unlike Web 2.0, which is centered around centralized platforms, Web 3.0 aims to give
+          users more control over their data and online interactions.</p>
+
+        <h3>Decentralization</h3>
+        <p>Decentralization is a core principle of Web 3.0. It involves distributing control away from central
+          authorities and allowing peer-to-peer interactions. Blockchain technology underpins this decentralization by
+          providing a transparent and immutable ledger.</p>
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSc96shed0KyhwYIZXSUEYIkqqt5T9IRzFPBA&s"
+          alt="Decentralization">
+
+        <h3>Blockchain Technology</h3>
+        <p>Blockchain is the backbone of Web 3.0. It is a distributed ledger technology that ensures data integrity and
+          transparency. Cryptocurrencies like Bitcoin and Ethereum use blockchain to facilitate secure transactions.</p>
+        <img
+          src="https://www.investopedia.com/thmb/pzT2wbISy-wNtMypVlBjr39dydg=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/Blockchain_final-086b5b7b9ef74ecf9f20fe627dba1e34.png"
+          alt="Blockchain Technology">
+
+        <h3>Smart Contracts</h3>
+        <p>Smart contracts are self-executing contracts with the terms of the agreement directly written into code. They
+          automate and enforce contractual agreements without intermediaries.</p>
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRXd3lA5-yEjbGMD_E1AbTrjPsRar5lKxM2fQ&s"
+          alt="Smart Contracts">
+
+        <h3>Decentralized Applications (dApps)</h3>
+        <p>dApps are applications that run on a decentralized network. Unlike traditional apps, dApps operate on
+          blockchain and are not controlled by a single entity. They offer greater transparency and security.</p>
+
+        <h3>Impact and Future</h3>
+        <p>Web 3.0 has the potential to transform various sectors, including finance, social media, and supply chain
+          management. It promises increased privacy, data ownership, and a more equitable online ecosystem.</p>
+
+        <p>The transition to Web 3.0 is still in its early stages, but it is expected to drive significant changes in
+          how we interact with the internet and digital technologies.</p>
+      </article>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+        <p>Made by Hanzla Zafar and Muhammad Arbab  with ❤️</p>
+    </div>
+</footer>
+
+<style>
+    footer {
+        text-align: center;
+        padding: 2rem; /* Increased padding */
+        background: #007bff; /* Bright blue background */
+        color: white;
+        margin-top: 2rem;
+        position: relative; /* Allows for positioning of the ::before pseudo-element */
+        overflow: hidden; /* Ensures the ::before doesn't overflow */
+    }
+
+    footer::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.2); /* Slight black overlay for depth */
+        z-index: 1; /* Behind text */
+    }
+
+    footer p {
+        font-size: 1.5rem; /* Larger font size */
+        z-index: 2; /* Above the overlay */
+        position: relative; /* Allows z-index to take effect */
+        margin: 0; /* Remove default margin */
+    }
+
+     
+</style>
+
+</body>
+
+</html>

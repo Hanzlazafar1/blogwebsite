@@ -1,0 +1,487 @@
+/* General Styles */
+body {
+  font-family: "Arial", sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  color: #333;
+}
+
+/* Header Styles */
+@keyframes slideIn {
+  from {
+    transform: translateY(-20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+header {
+  background: linear-gradient(to right, #4a90e2, #50e3c2);
+  color: white;
+  padding: 0.2rem 0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  
+}
+
+header h1 {
+  animation: slideIn 0.8s ease forwards;
+  text-align: center;
+  margin: 0;
+  font-size: 2.5rem;
+}
+
+/* Navigation */
+./* Navigation */
+.nav-bar {
+  margin-top: 1rem;
+}
+
+.nav-links {
+  padding: 0;
+}
+
+.nav-links li {
+  display: inline-block; /* Change to inline-block for horizontal alignment */
+  margin: 0 1.5rem; /* Maintain spacing between links */
+}
+
+.nav-links a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 1rem;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  position: relative;
+  display: inline-block;
+}
+
+.nav-links a::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: -5px;
+  width: 0;
+  height: 2px;
+  background: white;
+  transition: width 0.3s ease, left 0.3s ease;
+}
+
+.nav-links a:hover {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 5px;
+}
+
+.nav-links a:hover::after {
+  width: 100%;
+  left: 0;
+}
+
+body.scrolled .nav-bar {
+  height: 50px; /* Adjust height */
+}
+
+header:hover {
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+}
+
+
+/* Hero Section */
+#hero {
+  background: url("image.jpg");
+  background-size: cover;
+  height: 100vh;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 0 1rem;
+  overflow: hidden;
+  position: relative;
+}
+
+#hero h1 {
+  font-size: 4rem;
+  opacity: 0;
+  transform: translateY(50px) scale(0.8);
+  animation: zoomInUp 1.5s ease-out forwards, textGlow 5s infinite alternate, textSlideIn 5s ease-in-out infinite alternate;
+}
+
+#hero p {
+  font-size: 1.75rem;
+  margin-top: 1.5rem;
+  opacity: 0;
+  transform: translateY(-100px); /* Move the paragraph slightly above */
+  animation: simpleFadeIn 2s 0.5s ease-out forwards;
+}
+
+@keyframes simpleFadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(10px); /* Start lower */
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(-20px); /* End slightly above */
+  }
+}
+
+
+
+/* Zoom In and Up Animation */
+@keyframes zoomInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(50px) scale(0.8);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* Fade in and Up Animation for Paragraph */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Text Glow Animation */
+@keyframes textGlow {
+  0% {
+    text-shadow: 0 0 10px #fff, 0 0 20px #ff00ff, 0 0 30px #ff00ff;
+  }
+  100% {
+    text-shadow: 0 0 20px #00ffcc, 0 0 40px #00ffcc, 0 0 60px #00ffcc;
+  }
+}
+
+/* Text Slide In and Out Effect */
+@keyframes textSlideIn {
+  0% {
+    transform: translateX(-10px);
+  }
+  100% {
+    transform: translateX(10px);
+  }
+}
+
+/* Color Pulse Effect for Paragraph */
+@keyframes colorPulse {
+  0% {
+    color: #ffffff;
+  }
+  100% {
+    color: #68dada;
+  }
+}
+
+
+.btn-primary {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  background: #307ec7;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  position: relative;
+  overflow: hidden;
+  transition: background 0.4s, transform 0.4s;
+}
+
+.btn-primary::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 300%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.2);
+  transform: skewX(-45deg);
+  transition: left 0.7s ease;
+}
+
+.btn-primary:hover::before {
+  left: 100%;
+}
+
+.btn-primary:hover {
+  background: #0ce1e9;
+  transform: scale(1.05); /* Slight zoom on hover */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Add shadow on hover */
+}
+
+.btn-primary:active {
+  transform: scale(0.98); /* Button press effect */
+  transition: transform 0.1s ease;
+}
+
+
+/* Blog Preview Section */
+#blog-preview {
+  padding: 2rem 1rem;
+  background: linear-gradient(to right, #f9f9f9, #ffffff);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  position: relative;
+}
+
+#blog-preview::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.5);
+  opacity: 0;
+  animation: fadeInBackground 1s forwards;
+}
+
+#blog-preview .container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+#blog-preview h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  color: #333;
+  animation: fadeIn 1s ease forwards;
+}
+
+.blog-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+
+.blog-card {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease, transform 0.3s ease, background-color 0.3s ease;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: slideIn 0.5s forwards;
+  position: relative;
+}
+
+.blog-card:nth-child(1) { animation-delay: 0.1s; }
+.blog-card:nth-child(2) { animation-delay: 0.2s; }
+.blog-card:nth-child(3) { animation-delay: 0.3s; }
+.blog-card:nth-child(4) { animation-delay: 0.4s; }
+.blog-card:nth-child(5) { animation-delay: 0.5s; }
+
+.blog-card:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transform: scale(1.05);
+  background-color: rgba(0, 123, 255, 0.1);
+}
+
+.blog-card img {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.blog-card:hover img {
+  transform: scale(1.1);
+}
+
+.blog-card-content {
+  padding: 1rem;
+}
+
+.blog-card-content h3 {
+  font-size: 1.5rem;
+  margin: 0;
+  color: #007bff;
+  transition: color 0.3s ease;
+  animation: fadeInText 0.5s ease forwards;
+}
+
+.blog-card-content h3 a {
+  text-decoration: none;
+  color: inherit; /* Use the color of h3 */
+}
+
+.blog-card-content h3 a:hover {
+  text-decoration: underline;
+  color: #0056b3; /* Darker shade on hover */
+}
+
+.blog-card-content p {
+  font-size: 1rem;
+  color: #555;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes slideIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInBackground {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInText {
+  0% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+
+/* Footer Styles */
+footer {
+  background: linear-gradient(to right, #4a90e2, #50e3c2);
+  padding: 2rem 0;
+  color: white;
+  position: relative;
+  overflow: hidden;
+}
+
+.footer-content {
+  text-align: center;
+  position: relative;
+  z-index: 1; /* Ensures content is above the background */
+}
+
+/* Background Effect */
+footer::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.1);
+  animation: pulseBackground 6s infinite;
+  opacity: 0.4; /* Makes it subtle */
+  z-index: 0; /* Places it behind content */
+}
+
+.footer-content h3 {
+  margin-bottom: 0.5rem;
+  font-size: 1.75rem; /* Increased size */
+  animation: fadeIn 1s forwards; /* Fade-in animation */
+}
+
+.footer-content p {
+  margin-bottom: 1rem;
+  font-size: 1.1rem; /* Slightly increased size */
+  animation: fadeIn 1.5s forwards; /* Fade-in animation */
+}
+
+.subscribe-form {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1rem;
+  animation: slideUp 1.5s forwards; /* Slide-up animation */
+}
+
+.subscribe-form input[type="email"] {
+  padding: 0.5rem;
+  border: none;
+  border-radius: 5px 0 0 5px;
+  outline: none;
+}
+
+.subscribe-form button {
+  padding: 0.5rem;
+  border: none;
+  background: #50e3c2;
+  color: white;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.3s; /* Added transform transition */
+}
+
+.subscribe-form button:hover {
+  background: #4a90e2;
+  transform: scale(1.1); /* Slightly scale button on hover */
+}
+
+.social-icons {
+  margin: 1rem 0;
+}
+
+.social-icons a {
+  margin: 0 0.5rem;
+}
+
+.social-icons img {
+  width: 30px;
+  height: 30px;
+  transition: transform 0.3s, filter 0.3s; /* Added filter transition */
+}
+
+.social-icons img:hover {
+  transform: scale(1.2); /* Scale icon on hover */
+  filter: brightness(1.2); /* Slight brightness increase on hover */
+}
+
+.footer-content p:last-child {
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  animation: fadeIn 2s forwards; /* Fade-in animation */
+}
+
+/* Animations */
+@keyframes pulseBackground {
+  0%, 100% { opacity: 0.4; }
+  50% { opacity: 0.6; }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from { transform: translateY(20px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
